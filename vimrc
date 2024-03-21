@@ -5,18 +5,22 @@ syntax on
 
 "Reset Mapleader
 let mapleader=" "
+" space + enter can remove highlight search
 noremap <LEADER><CR> :nohlsearch<CR>
 
+"Jump between different search results
 noremap = nzz
 noremap - Nzz
 
+"Fast Jump
 noremap J 5j
 noremap K 5k
 noremap H 7h
-noremap L 5l
+noremap L 7l
 
 "Unbind s key
 map s <nop>
+nnoremap S <NOP>
 
 
 "split command
@@ -24,10 +28,12 @@ map sh :set nosplitright<CR>:vsplit<CR>
 map sl :set splitright<CR>:vsplit<CR>
 map sj :set splitbelow<CR>:split<CR>
 map sk :set nosplitbelow<CR>:split<CR>
+"Jump between splitted windows
 map <LEADER>h <C-w>h
 map <LEADER>j <C-w>j
 map <LEADER>k <C-w>k
 map <LEADER>l <C-w>l
+"Change size of splitted windows
 map <up> :res +5<CR>
 map <down> :res -5<CR>
 map <left> :vertical resize -5<CR>
